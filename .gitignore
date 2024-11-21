@@ -108,3 +108,5 @@ venv.bak/
 # don't include actual puzzle inputs
 # https://old.reddit.com/r/adventofcode/wiki/troubleshooting/no_asking_for_inputs
 input.txt
+
+/.ruff_cache/
