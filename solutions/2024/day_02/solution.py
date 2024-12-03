@@ -1,7 +1,7 @@
 # puzzle prompt: https://adventofcode.com/2024/day/2
 
 from itertools import pairwise
-from typing import Any, Generator, Iterable, List
+from typing import List
 
 from ...base import StrSplitSolution, answer
 
