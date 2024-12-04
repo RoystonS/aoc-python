@@ -1,4 +1,4 @@
-select = [
+lint.select = [
   "E",    # PEP8 recommendations
   "F",    # bugs
   "I001", # import sorting
@@ -18,12 +18,12 @@ select = [
   "PERF", # performance hints
 ]
 
-ignore = [
+lint.ignore = [
   "E501", # skip enforcing line length
   "E741", # ignore short variable names
 ]
 
-unfixable = [
+lint.unfixable = [
   "F401", # don't remove unused imports
   "F841", # don't remove unused variables
 ]
