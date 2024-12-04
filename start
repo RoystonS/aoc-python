@@ -39,21 +39,6 @@ if __name__ == "__main__":
     Path(day_dir, "input.txt").touch()
     Path(day_dir, "input.test.txt").touch()
 
-    notes_path = Path(day_dir, "README.md")
-    if not notes_path.exists():
-        notes_path.write_text(
-            "\n\n".join(
-                [
-                    f"# Day {day} ({ARGS.year})",
-                    f"`TITLE` ([prompt](https://adventofcode.com/{ARGS.year}/day/{day}))",
-                    "Use this space for notes on the day's solution and to document what you've learned!",
-                    "## Part 1",
-                    "## Part 2",
-                    "",
-                ]
-            )
-        )
-
     solution_path = Path(day_dir, "solution.py")
     if solution_path.exists():
         # if we're here, it's probably a re-run
