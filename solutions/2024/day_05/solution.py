@@ -1,7 +1,7 @@
 # puzzle prompt: https://adventofcode.com/2024/day/5
 
 from graphlib import TopologicalSorter
-from typing import Iterable, List, Set
+from typing import Iterable, List, Set, Tuple
 
 from ...base import StrSplitSolution, answer
 
@@ -17,7 +17,7 @@ class Update:
         self.pages = pages
 
         # Compute the rules which would be problematic for this update
-        prohibited_rules: Set[int, Set[int]] = set()
+        prohibited_rules: Set[Tuple[int, int]] = set()
 
         # e.g. for 1,2,3, we can look at 1 and see that (2,1) and (3,1) would be problematic. And then (3,2)
         for index, earlier_page in enumerate(pages):

@@ -51,11 +51,13 @@ class Grid:
         (dr, dc) = delta
 
         while True:
-            yield self.get(row, col)
-            row += dr
-            col += dc
-            if self._out_of_range(row, col):
-                return
+            ch = self.get(row, col)
+            if ch is None:
+                break
+            else:
+                yield ch
+                row += dr
+                col += dc
 
 
 def opposite_xmas(ch: str):
